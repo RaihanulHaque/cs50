@@ -47,10 +47,10 @@ def register_otp():
 def register_check():
 	otpinput = request.form.get("otp")
 	if otpinput == otp  :
-		db = SQL("sqlite:///rahidb.db")
+		db = SQL("sqlite:///user.db")
 		session["logged_in"] = True
 		cart = 0
-		db.execute("INSERT INTO accounts (Name,Email,Password,Cart) VALUES(?,?,?,?)",name , email , password,cart )
+		db.execute("INSERT INTO users (Name,Email,Password,Cart) VALUES(?,?,?,?)",name , email , password,cart )
 		message = "Congratulations "+name+"\nYou are registered in RAMAZON "
 		server = smtplib.SMTP("smtp.gmail.com",587)
 		server.starttls()
@@ -69,10 +69,10 @@ def login():
 @app.route("/login_check",methods = ["POST"])
 def login_check():
 	global email, password, name, logged_in,cart
-	db = SQL("sqlite:///rahidb.db")
+	db = SQL("sqlite:///user.db")
 	email = request.form.get("email")
 	password = request.form.get("password")
-	row = db.execute("SELECT Id,Name,Password FROM accounts WHERE Email = ? AND Password = ?",email,password)
+	row = db.execute("SELECT Id,Name,Password FROM users WHERE Email = ? AND Password = ?",email,password)
 	if row[0]["Password"] == password :
 		session["logged_in"] = True
 		logged_in = True
@@ -90,7 +90,7 @@ def error():
 def shop():
 	if session.get("logged_in") == True :
 		logged_in = True
-		db = SQL("sqlite:///rahidb.db")
+		db = SQL("sqlite:///user.db")
 		return render_template("shop.html",logged_in = logged_in,name = name, shop = "Shop")
 	else:
 		return redirect("/")
@@ -99,7 +99,7 @@ def shop():
 def cart():
 	if session.get("logged_in") == True :
 		logged_in = True
-		db = SQL("sqlite:///rahidb.db")
+		db = SQL("sqlite:///user.db")
 		if not request.form.get("mbp13") :
 			mbp13 = 0
 		else :
@@ -129,7 +129,7 @@ def cart():
 		else :
 			prodxdr = int(request.form.get("prodxdr")[1:])
 		cart = mbp13 + mba13 + mbp16 + macmini + imac21 + ipad7 + prodxdr
-		db.execute("UPDATE accounts SET Cart = ? WHERE Email = ? AND Password = ?",cart,email,password)
+		db.execute("UPDATE users SET Cart = ? WHERE Email = ? AND Password = ?",cart,email,password)
 		return redirect("/profile")
 	else :
 		session["logged_in"] = False
@@ -140,8 +140,8 @@ def cart():
 def profile():
 	if session.get("logged_in") == True :
 		logged_in = True
-		db = SQL("sqlite:///rahidb.db")
-		row= db.execute("SELECT Id,Name,Cart FROM accounts WHERE Email = ? AND Password = ?",email,password)
+		db = SQL("sqlite:///user.db")
+		row= db.execute("SELECT Id,Name,Cart FROM users WHERE Email = ? AND Password = ?",email,password)
 		cart = row[0]["Cart"]
 		return render_template("profile.html",logged_in=logged_in,name = name,cart = cart, shop = "Shop")
 	else :
