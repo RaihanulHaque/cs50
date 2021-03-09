@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title></title>
+<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/c412b64127.js" crossorigin="anonymous"></script>
+<style type="text/css">
+*{
+margin:0;
+
+}
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-inner{
+ display:inline-block;
+ background-color:#1D1E22;
+ width:100%;
+ 
+}
+.header-inner h2{
+float:left;
+margin-top:-3px;
+margin-left:5px;
+
+}
+h2 a{
+ color:white;
+ font-family:Baumans;
+ text-decoration:none;
+ 
+ 
+}
+.header-inner nav{
+ float:right;
+}
+.header-inner nav ul li{
+ 
+ list-style:none;
+ display:inline-block;
+ margin-top:07px;
+ margin-right:05px;
+ 
+}
+.header-inner nav ul li.active{
+ border:3px solid white;
+}
+.header-inner nav ul li a{
+font-family:Asap;
+font-weight:19;
+color:white;
+text-decoration:none;
+padding-left:5px;
+padding-right:5px;
+}
+
+.col-md-4{
+background-color:#72A0C1;
+font-family:Asap;
+color:white;
+padding:19px;
+font-size:20px;
+}
+.col-md-8{
+background-color:#B2FFFF;
+font-family:Asap;
+padding:19px;
+}
+.container-fluid{
+display:inline-block;
+}
+#footer .container-fluid{
+ background-color:#2B0548;
+ color:white;
+ width:100%;
+ font-family:Asap;
+ padding:19px;
+
+}
+#footer ul li{
+ list-style:none;
+ display:inline-block;
+ padding:5px;
+}
+#footer ul li i{
+ font-size:25px;
+ color:white;
+}
+.card {
+  padding: 40px;
+  background: #fff;
+  max-width: 360px;
+  border-radius: 20px;
+  margin: 60px auto;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #294;
+}
+
+.shadow { 
+  box-shadow: 0 5px 10px rgba(154,160,185,.9), 0 15px 40px rgba(166,173,201,.5);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar-header">
+<div class="header-inner">
+<h2><a href="#" class="navbar-brand">Raihanul Haque</a></h2>
+<nav>
+<ul>
+  <li><a href="/" >Home</a></li>
+  {% if logged_in == false %}
+  <li><a href="/login" target="_parent" >{{sign}}</a></li>
+  {% else %}
+  <li><a href="/profile" target="_parent" >{{name}}</a></li>
+  <li><a href="/shop" target="_parent" >{{shop}}</a></li>
+  {% endif %}
+</ul>
+</nav>
+
+</div>
+</nav>
+</div>
+
+{% block body %}{% endblock %}
+
+
+<footer id="footer">
+<div class="container-fluid text-center">
+      <h2 style="text-align:center;margin:-10px;">Contact Me</h2>
+      <hr>
+      <p>
+        <i class="fas fa-home mr-3"></i> Rajshahi, Bangladesh</p>
+      <p>
+        <i class="fas fa-envelope mr-3"></i> raihanulhaque007@gmail.com</p>
+      <p>
+        <i class="fas fa-phone mr-3"></i> +8801725737812</p>
+
+       <ul>
+       <li><a href="https://www.facebook.com/CoderRahi" ><i class="fab fa-facebook"></i></a></li>
+       <li><a href="https://www.github.com/RaihanulHaque" ><i class="fab fa-github"></i></a></li>
+       <li><a href="#" ><i class="fab fa-linkedin"></i></li>
+       <li></li>
+       </ul>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div style="background-color:#FAFAFC;font-family:Asap;">
+<h1 style="text-align:center;">Register into Database</h1>
+<form class="needs-validation" action="register_otp" method="post">
+ <div class="co">
+  <label>Name</label>
+  <input type="text" name="name" class="form-control" placeholder="Name" required>
+  <br>
+  <label>Email</label>
+  <input type="email" name="email" class="form-control" placeholder="Email" required>
+  <br>
+  <label>Password</label>
+  <input type="password" name="password" class="form-control" placeholder="Password" required>
+  <br>
+  <label>Retype Password</label>
+  <input type="password" name="repassword" class="form-control" placeholder=" Retype Password" required>
+ </div>
+ <br>
+ <div style="text-align:center;">
+  <input class="btn btn-primary " type="submit" value="Register">
+ </div>
+ <br>
+</form>
+</div>
+{% endblock %}

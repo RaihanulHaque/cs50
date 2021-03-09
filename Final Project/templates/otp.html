@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container" style="background-color:#FAFAFC;font-family:Asap;">
+<form action="/register_check" method="post">
+  <h2 style="text-align:center;">Enter your OTP</h2>
+  <input type="text" name="otp" class="form-control" placeholder="OTP" required>
+  <br>
+  <div style="text-align:center;">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+  <br>
+ </form>
+ </div>
+{% endblock %}

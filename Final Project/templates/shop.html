@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="top" style="text-align:center;">
+<h2>Welcome to CS50 shop</h2>
+<p>Here you can buy various mac products</p>
+</div>
+<div class=col-md-43 mb-3 text-center">
+<form action="/cart" method="post">
+<div class="product" style="width:100%;">
+  <div class="row">
+    <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" >
+          <img src="https://i.ibb.co/ssmwL6K/7ce1d0ce-5d4c-44c4-a1f6-255d1a89337f.jpg" alt="7ce1d0ce-5d4c-44c4-a1f6-255d1a89337f" height="210px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            MacBook Pro 13
+          </h3>
+          <p class="description">
+            1.4GHz quad‑core 8th‑gen Intel Core i5, Turbo Boost up to 3.9GHzM<br>
+            Configurable to 1.7GHz quad‑core 8th‑gen Intel Core i7, Turbo Boost up to 4.5GHz<br>
+            8GB of 2133MHz LPDDR3 onboard memory<br>
+            Configurable to 16GB of memory<br>
+            Intel Iris Plus Graphics 645<br>
+            Two Thunderbolt 3 (USB‑C) ports
+          </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="mbp13" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$1299">i5 8th gen 8GB/256GB $1299</option>
+                <option value="$1499">i5 8th gen 16GB/256GB $1499</option>
+                <option value="$1599">i7 8th gen 8GB/256GB $1599</option>
+                <option value="$1799">i7 8th gen 16GB/256GB $1799</option>
+              </select>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" style="width:100%;">
+          <img src="https://i.ibb.co/DRKfpq8/macbook-air-2020-09-2-2-610x407.jpg" alt="macbook-air-2020-09-2-2-610x407" height="180px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            MacBook Air
+          </h3>
+          <p class="description">
+            1.1GHz quad-core Intel Core i5, Turbo Boost up to 3.5GHz<br>
+            Configurable to 1.2GHz quad-core Intel Core i7, Turbo Boost up to 3.8GHz<br>
+            512GB PCIe-based SSD<br>
+            8GB of 3733MHz LPDDR4X onboard memory<br>
+            Configurable to 16GB of memory<br>
+            Two Thunderbolt 3 (USB-C) ports<br>
+            
+          </p>
+            <div class="product-buttons mt-4">
+              <div class="row align-items-center">
+                <select name="mba13" class="btn btn-primary">
+                  <option disabled selected value="">Select your model</option>
+                  <option value="$1299">i5 10th gen 8GB/512GB $1299</option>
+                  <option value="$1499">i5 10th gen 16GB/512GB $1499</option>
+                  <option value="$1449">i7 10th gen 8GB/512GB $1449</option>
+                  <option value="$1649">i7 10th gen 16GB/512GB $1649</option>
+                </select>
+              </div>
+            </div>
+         </div>
+    </div>
+    <div class="card shadow" style="border:1px solid black;">
+      <div class="block-image" style="width:100%;">
+        <img src="https://i.ibb.co/tccz5mm/Mac-Book-Pro-16-in-Touch-Bar-Pure-Top-Open-Space-Gray-SCREEN-540x.webp" alt="macbook-pro-2020-09-2-2-610x407" height="220px" width="280px">
+      </div>
+      <div class="block-body text-center">
+        <h3 style="color:blue;">
+          MacBook Pro 16
+        </h3>
+        <p class="description">
+          2.6GHz 6‑core Intel Core i7, Turbo Boost up to 4.5GHz<br>
+          Configurable to 2.4GHz 8‑core Intel Core i9, Turbo Boost up to 5.0GHz<br>
+          512GB SSD<br>
+          16GB of 2666MHz DDR4 onboard memory<br>
+          Configurable to 32GB or 64GB of memory<br>
+          16-inch Retina display with True Tone<br>
+          Four Thunderbolt 3 (USB-C) ports
+        </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="mbp16" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$2399">i7 9th gen 16GB/512GB $2399</option>
+                <option value="$2799">i7 9th gen 32GB/512GB $2799</option>
+                <option value="$2699">i9 9th gen 16GB/512GB $2699</option>
+                <option value="$3099">i9 9th gen 16GB/512GB $3099</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" style="width:100%;">
+          <img src="https://i.ibb.co/0ydBqRW/Screenshot-2019-04-30-at-01-59-43-640x545.png" alt="mac-mini-2020-09-2-2-610x407" height="200px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            Mac Mini 2020
+          </h3>
+          <p class="description">
+            3.0GHz 6-core Intel Core i5 Turbo Boost up to 4.1GHz<br>
+            Configurable to 6-Core 3.2GHz 6-core Intel Core i7 Turbo Boost up to 4.6GHz <br>
+            8GB of 2666MHz DDR4 memory<br>
+            Configurable to 16GB, 32GB, or 64GB<br>
+            512GB PCle based SSD<br>
+            Four Thunderbolt 3 (USB-C) ports, one HDMI port, two USB 3.1 ports and one Ethernet port
+          </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="macmini" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$1099">i5 8th gen 8GB/512GB $1099</option>
+                <option value="$1299">i5 8th gen 16GB/512GB $1299</option>
+                <option value="$1299">i7 8th gen 8GB/512GB $1299</option>
+                <option value="$1499">i7 8th gen 16GB/512GB $1499</option>
+              </select>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" style="width:100%;">
+          <img src="https://i.ibb.co/d0KKpSD/hero-SQ-1-LW4045927-1-625cb1ba7a894cc38db8565dd81072b3.webp" alt="iMac-21inch-4k-2020-09-2-2-610x407" height="224px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            iMac 21inch 4k
+          </h3>
+          <p class="description">
+            3.0GHz 6-core Intel Core i5 Turbo Boost up to 4.1GHz<br>
+            Configurable to 3.2GHz 6-core Intel Core i7, Turbo Boost up to 4.6GHz<br>
+            8GB of 2666MHz DDR4 memory<br>
+            Configurable to 16GB or 32GB<br>
+            256GB SSD<br>
+            Two Thunderbolt 3 (USB-C) ports, one HDMI port, four USB 3.1 ports, one headphone port and one Ethernet port
+          </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="imac21" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$1499">i5 8th gen 8GB/256GB $1499</option>
+                <option value="$1699">i5 8th gen 16GB/256GB $1699</option>
+                <option value="$1699">i7 8th gen 8GB/256GB $1699</option>
+                <option value="$1899">i7 8th gen 16GB/256GB $1899</option>
+              </select>
+            </div>
+          </div>   
+        </div>
+      </div>
+      <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" style="width:100%;">
+          <img src="https://i.ibb.co/NxhznsZ/Apple-i-Pad-10-2-Inch-7th-Gen-128-GB-Gold-rcwilley-image1-1000.jpg" alt="iPad-10.2inch-7th-2020-09-2-2-610x407" height="240px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            iPad 10.2inch 7th gen
+          </h3>
+          <p class="description">
+            A10 Fusion chip with 64‑bit architecture<br>
+            Embedded M10 coprocessor<br>
+            32GB, 128GB<br>
+            8-megapixel camera
+          </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="ipad7" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$329">32GB Wi-Fi $329</option>
+                <option value="$459">32GB Wi-Fi+Cellular $459</option>
+                <option value="$559">128GB Wi-Fi+Cellular $559</option>
+              </select>
+            </div>
+          </div>   
+        </div>
+      </div>
+      <div class="card shadow" style="border:1px solid black;">
+        <div class="block-image" style="width:100%;">
+          <img src="https://i.ibb.co/G9NcSK8/apple-pro-display-xdr-roundup-header.webp" alt="Pro-Display-XDR-32inch-6k-2020-09-2-2-610x407" height="190px" width="280px">
+        </div>
+        <div class="block-body text-center">
+          <h3 style="color:blue;">
+            Pro Display XDR
+          </h3>
+          <p class="description">
+            Retina 6K Display<br>
+            32-inch (diagonal) IPS LCD display with oxide TFT technology<br>
+            Resolution: 6016 by 3384 pixels (20.4 million pixels) at 218 pixels per inch<br>
+            Aspect ratio: 16:9
+          </p>
+          <div class="product-buttons mt-4">
+            <div class="row align-items-center">
+              <select name="prodxdr" class="btn btn-primary">
+                <option disabled selected value="">Select your model</option>
+                <option value="$4999">Standard glass $4999</option>
+                <option value="$5999">Nano-texture glass $5999</option>
+              </select>
+            </div>
+          </div>   
+        </div>
+      </div>
+  </div>
+</div>
+<br>
+<div style="text-align:center;">
+  <input class="btn btn-primary" type="submit" value="Submit your Shop">
+</div>
+<br>
+</form>
+</div>
+{% endblock %}

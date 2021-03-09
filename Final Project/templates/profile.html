@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3 style="text-align:center">Hello {{name}}</h3>
+<div style="text-align:center;font-family:Asap;">
+{% if cart == 0 %}
+    <h4>Your shopping cart is empty</h4>
+{% else %}
+    <h4>Your total shopping cost is - ${{cart}}</h4>
+{% endif %}
+</div>
+<br>
+<div style="text-align:center;">
+  <button class="btn btn-primary" >
+    <a href="/logout" style="color:white;">Log out</a>
+  </button>
+</div>
+<br>
+{% endblock %}
